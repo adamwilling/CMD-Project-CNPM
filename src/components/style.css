@@ -1,0 +1,9 @@
+#footer {
+    position: fixed;
+    z-index: 3;
+    height: fit-content;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    color: white;
+}

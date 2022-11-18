@@ -1,0 +1,92 @@
+.notificationWrapper {
+    flex: 0 0 2rem;
+    position: relative;
+    margin: inherit 1rem;
+    .notificationToggle {
+        position: absolute;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &.ring {
+            animation: ring ease alternate infinite 0.5s;
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 1rem;
+                padding: 0.15rem;
+                border-radius: 25%;
+                content: attr(countunread);
+                background-color: #de350b;
+                color: white;
+                text-align: center;
+                font-size: 10px;
+            }
+        }
+        @keyframes ring {
+            0% {
+                transform: translateY(-50%) rotate(-30deg);
+            }
+            100% {
+                transform: translateY(-50%) rotate(30deg);
+            }
+        }
+    }
+    .notificationContent {
+        position: absolute;
+        display: none;
+        z-index: 9999;
+        right: 0;
+        transform: translateY(30px);
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 -4px 32px rgb(0 0 0 / 20%);
+        animation: fadeInUp 0.25s ease-in;
+        .notificationHeader {
+            position: relative;
+            padding: 10px;
+            color: white;
+            background-color: #2391f5;
+            font-weight: 900;
+            font-size: medium;
+            letter-spacing: 1px;
+            .notificationAction {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                color: white;
+            }
+        }
+        .notificationBody {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        &::after {
+            border: 10px solid transparent;
+            border-bottom: 10px solid #2391f5;
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: -18px;
+        }
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+
+    50% {
+        opacity: 0.5;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(calc(0% - 30px));
+        transform: translateZ(calc(0% - 40px));
+    }
+}
