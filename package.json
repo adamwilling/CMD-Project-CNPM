@@ -1,38 +1,72 @@
 {
-  "name": "cmd-fe",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "cmd-management",
+    "version": "0.1.0",
+    "homepage": "http://cmd.ktxcomay.com.vn/",
+    "private": true,
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^34.2.0",
+        "@ckeditor/ckeditor5-ckfinder": "^34.2.0",
+        "@ckeditor/ckeditor5-react": "^5.0.2",
+        "@reduxjs/toolkit": "^1.8.2",
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.3.0",
+        "@testing-library/user-event": "^13.5.0",
+        "axios": "^0.24.0",
+        "cdbreact": "^1.5.3",
+        "clsx": "^1.2.1",
+        "formik": "^2.2.9",
+        "lodash": "^4.17.21",
+        "multiselect-react-dropdown": "^2.0.25",
+        "prop-types": "^15.8.1",
+        "query-string": "^7.0.1",
+        "react": "^18.2.0",
+        "react-bootstrap": "^2.1.1",
+        "react-bootstrap-sidebar-menu": "^2.0.1",
+        "react-ckeditor-component": "^1.1.0",
+        "react-csv": "^2.2.2",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.3.1",
+        "react-pdf": "^5.7.2",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "^6.3.0",
+        "react-scripts": "^5.0.1",
+        "react-transition-group": "^4.4.2",
+        "redux": "^4.1.2",
+        "redux-thunk": "^2.4.1",
+        "sweetalert2": "^11.4.24",
+        "web-vitals": "^2.1.4",
+        "yup": "^0.32.11"
+    },
+    "devDependencies": {
+        "babel-plugin-module-resolver": "^4.1.0",
+        "customize-cra": "^1.0.0",
+        "react-app-rewired": "^2.2.1",
+        "sass": "^1.53.0"
+    },
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build",
+        "test": "react-app-rewired test",
+        "eject": "react-app-rewired eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
