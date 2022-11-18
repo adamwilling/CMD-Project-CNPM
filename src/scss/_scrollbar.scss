@@ -1,0 +1,12 @@
+/* width */
+::-webkit-scrollbar {
+    width: .7rem;
+    /* Track */
+    &-track {
+        box-shadow: inset 0 0 2.5px grey;
+    }
+    /* Handle */
+    &-thumb {
+        background: $primary;
+    }
+}

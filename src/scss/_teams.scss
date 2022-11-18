@@ -1,0 +1,99 @@
+@media (min-width: $breakpoint-lg) {
+    .team-header {
+        display: block;
+    }
+    .team {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.25rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        border: none;
+        .team-code {
+            flex: 0 0 auto;
+            width: 10%;
+        }
+        .team-name {
+            flex: 0 0 auto;
+            width: 15%;
+        }
+        .team-numberOfMembers {
+            flex: 0 0 auto;
+            width: 15%;
+            text-align: center;
+        }
+        .team-leader {
+            flex: 0 0 auto;
+            width: 25%;
+            text-align: center;
+        }
+    }
+    .team.item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: .25rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        border: none;
+        .team-code {
+            flex: 0 0 auto;
+            width: 10%;
+        }
+        .team-name {
+            flex: 0 0 auto;
+            width: 15%;
+        }
+        .team-numberOfMembers {
+            flex: 0 0 auto;
+            width: 15%;
+            text-align: center;
+        }
+        .team-leader {
+            flex: 0 0 auto;
+            width: 25%;
+            text-align: left;
+        }
+    }
+}
+@media (max-width: calc($breakpoint-lg - 1px)) {
+    .team-header {
+        display: none!important;
+    }
+    .team {
+        position: relative;
+        display: block;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        .team-code {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .team-name {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .team-numberOfMembers {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .team-leader {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .team-more {
+            position: absolute;
+            right: 0%;
+            top: 0%;
+        }
+    }
+}

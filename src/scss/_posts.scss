@@ -1,0 +1,195 @@
+.post__item {
+    + .post__item {
+        margin-top: 1rem;
+    }
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: auto;
+    box-shadow: 1px 1px 10px #96baec;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    > .header__wrapper {
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        margin-bottom: 2rem;
+        .header__user {
+            display: flex;
+            .header__avatar {
+                flex: 1 0 40px;
+                margin-right: 0.75rem;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+            .header__info {
+                flex: 0 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+                .header__info--name {
+                    color: $primary;
+                    font-weight: bold;
+                }
+                .header__info--time {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        .header__actions {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    > .content__wrapper {
+        h3.title {
+            color: $primary;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            border: 2px solid #2391f5;
+            border-radius: 15px;
+        }
+        .content {
+            text-align: justify;
+            align-content: center;
+        }
+    }
+    > .react-wrapper {
+        margin-top: 2rem;
+        height: 40px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .react__button {
+            padding: 4px 8px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            span {
+                margin-left: 0.25rem;
+                align-self: flex-end;
+            }
+            .react__button--heart-outline {
+                width: 26px;
+                height: 26px;
+                background: linear-gradient(180deg, #67f3c9 0%, #2391f5 97.65%);
+                clip-path: path(
+                    "M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181"
+                );
+                transform: scale(1.2);
+            }
+            .react__button--heart-fill {
+                width: 26px;
+                height: 26px;
+                background: linear-gradient(180deg, #67f3c9 0%, #2391f5 97.65%);
+                clip-path: path(
+                    "M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
+                );
+                transform: scale(1.2);
+            }
+        }
+    }
+    .show-comment {
+        transition-duration: 2s;
+        height: 100px;
+        border-top: 2px solid #2f6bb1;
+        display: none;
+        .typing-comment {
+            width: 100%;
+            display: flex;
+            .avatar {
+                display: flex;
+                align-content: center;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+            .input-comment {
+                border: 1px solid #96baec;
+                display: flex;
+                align-items: center;
+                input {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+    .active {
+        display: flex;
+    }
+}
+img {
+    max-width: 100%;
+    background-size: auto;
+    background-clip: content-box;
+}
+.create_post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 10px;
+        box-shadow: 0px 2px 4px #2f6bb1;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+.title {
+    border: 1px solid $primary;
+    border-radius: 15px;
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+}
+@media (max-width: $breakpoint-lg) {
+    .post__container--left {
+        flex: 1 0 100%;
+    }
+    .post__container--right {
+        display: none;
+    }
+}
+@media (min-width: $breakpoint-lg) {
+    .post__container--left {
+        flex: 0 0 65%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .post__container--right {
+        flex: 0 0 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        .listEmployee__container {
+            flex: 1 1 auto;
+            padding: 1rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+    }
+}

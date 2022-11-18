@@ -1,0 +1,274 @@
+@media (min-width: $breakpoint-lg) {
+    .task-header {
+        display: block;
+    }
+    .task {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.25rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        border: none;
+        .task-title {
+            flex: 0 0 auto;
+            width: 25%;
+        }
+        .task-creator {
+            flex: 0 0 auto;
+            width: 120px;
+            text-align: end;
+        }
+        .task-arrow {
+            flex: 0 0 auto;
+            width: 20px;
+        }
+        .task-receiver {
+            flex: 0 0 auto;
+            width: 120px;
+        }
+        .task-timeline {
+            flex: 0 0 auto;
+            width: 15%;
+            text-align: center;
+        }
+        .task-status {
+            flex: 0 0 auto;
+            width: 10%;
+            text-align: center;
+        }
+        .task-rate {
+            flex: 0 0 auto;
+            width: 10%;
+        }
+    }
+    .task.item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.25rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        .task-title {
+            flex: 0 0 auto;
+            width: 25%;
+            font-weight: 500;
+            text-overflow: ellipsis;
+        }
+        .task-creator {
+            flex: 0 0 auto;
+            width: 120px;
+        }
+        .task-arrow {
+            flex: 0 0 auto;
+            width: 25px;
+            height: 25px;
+            background: url("../assets/icons/arrow_right.svg") no-repeat;
+        }
+        .task-receiver {
+            flex: 0 0 auto;
+            width: 120px;
+        }
+        .task-timeline {
+            flex: 0 0 auto;
+            width: 15%;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.09em;
+            text-align: center;
+        }
+        .task-status {
+            flex: 0 0 auto;
+            width: 10%;
+            text-align: center;
+        }
+        .task-rate {
+            flex: 0 0 auto;
+            width: 10%;
+        }
+    }
+}
+@media (max-width: calc($breakpoint-lg - 1px)) {
+    .task-header {
+        display: none !important;
+    }
+    .task {
+        position: relative;
+        display: block;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        .task-title {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .task-creator {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .task-receiver {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .task-timeline {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .task-status {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .task-rate {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        .task-more {
+            position: absolute;
+            right: 0%;
+            top: 0%;
+        }
+    }
+}
+
+.taskHistory__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .taskHistory__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        border: 1px solid rgba(133, 182, 255, 0.58);
+        box-shadow: 0px 1px 4px rgba(47, 107, 177, 0.4);
+        border-radius: 1rem;
+        padding: 1rem;
+        &.reverse {
+            flex-direction: row-reverse;
+            .taskHistory__avatar {
+                margin-left: 0.75rem;
+                margin-right: 0;
+            }
+        }
+        .taskHistory__avatar {
+            flex: 0 0 50px;
+            width: 50px;
+            height: 50px;
+            margin-left: 0;
+            margin-right: 0.75rem;
+            padding: 0;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .taskHistory__detail {
+            flex: 1 0 0%;
+            display: flex;
+            flex-direction: column;
+            &__info {
+                flex: 1 0 0%;
+                display: flex;
+                flex-direction: row;
+                &.reverse {
+                    flex-direction: row-reverse;
+                    .taskHistory__detail__info--name {
+                        text-align: end;
+                    }
+                }
+                &--name {
+                    flex: 1 0 0%;
+                    color: $primary;
+                    font-weight: bolder;
+                    cursor: pointer;
+                }
+                &--time {
+                    flex: 0 0 auto;
+                    color: $gray-600;
+                    text-align: end;
+                }
+            }
+            &__message {
+                flex: 1 0 0%;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.taskDiscussion__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .taskDiscussion__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        background: $light;
+        box-shadow: 0 0.5rem 1rem rgba($black, 0.175);
+        border-radius: 1rem;
+        padding: 1rem;
+        &.reverse {
+            flex-direction: row-reverse;
+            .taskDiscussion__avatar {
+                margin-left: 0.75rem;
+                margin-right: 0;
+            }
+        }
+        .taskDiscussion__avatar {
+            flex: 0 0 50px;
+            width: 50px;
+            height: 50px;
+            margin-left: 0;
+            margin-right: 0.75rem;
+            padding: 0;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .taskDiscussion__detail {
+            flex: 1 0 0%;
+            display: flex;
+            flex-direction: column;
+            &__info {
+                flex: 1 0 0%;
+                display: flex;
+                flex-direction: row;
+                &.reverse {
+                    flex-direction: row-reverse;
+                    .taskDiscussion__detail__info--name {
+                        text-align: end;
+                    }
+                }
+                &--name {
+                    flex: 1 0 0%;
+                    color: $primary;
+                    font-weight: bolder;
+                    cursor: pointer;
+                }
+                &--time {
+                    flex: 0 0 auto;
+                    color: $gray-600;
+                    text-align: end;
+                }
+            }
+            &__content {
+                flex: 1 0 0%;
+                text-align: justify;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@media (min-width: 992px) {
+    .device-header {
+        display: block;
+    }
+    .device {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0.25rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        border: none;
+        .device-department {
+            flex: 0 0 auto;
+            width: 40%;
+        }
+        .device-total {
+            flex: 0 0 auto;
+            width: 30%;
+            text-align: center;
+        }
+        .device-createDate {
+            flex: 0 0 auto;
+            width: 15%;
+            text-align: center;
+        }
+    }
+    .device.item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: .25rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        border: none;
+        .device-name {
+            flex: 0 0 auto;
+            width: 40%;
+        }
+        .device-status {
+            flex: 0 0 auto;
+            width: 30%;
+            text-align: center;
+        }
+        .device-createDate {
+            flex: 0 0 auto;
+            width: 15%;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .device-header {
+        display: none!important;
+    }
+    .device {
+        position: relative;
+        display: block;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        word-break: break-word;
+        .device-name {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .device-status {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .device-createDate {
+            margin: 0.5rem 0;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .device-more {
+            position: absolute;
+            right: 0%;
+            top: 0%;
+        }
+    }
+}
